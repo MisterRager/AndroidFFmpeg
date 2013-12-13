@@ -379,7 +379,7 @@ OUT_LIBRARY=$PREFIX/libffmpeg.so
 ADDITIONAL_CONFIGURE_FLAG=--disable-asm
 SONAME=libffmpeg.so
 PREBUILT=$NDK/toolchains/x86-4.4.3/prebuilt/$OS
-PLATFORM_VERSION=android-9
+PLATFORM_VERSION=android-8
 build_amr
 build_aac
 build_fribidi
@@ -389,22 +389,22 @@ build_ffmpeg
 build_one
 
 #mips
-EABIARCH=mipsel-linux-android
-ARCH=mips
-OPTIMIZE_CFLAGS="-EL -march=mips32 -mips32 -mhard-float"
-PREFIX=../ffmpeg-build/mips
-OUT_LIBRARY=$PREFIX/libffmpeg.so
-ADDITIONAL_CONFIGURE_FLAG="--disable-mips32r2"
-SONAME=libffmpeg.so
-PREBUILT=$NDK/toolchains/mipsel-linux-android-4.4.3/prebuilt/$OS
-PLATFORM_VERSION=android-9
-build_amr
-build_aac
-build_fribidi
-build_freetype2
-build_ass
-build_ffmpeg
-build_one
+#EABIARCH=mipsel-linux-android
+#ARCH=mips
+#OPTIMIZE_CFLAGS="-EL -march=mips32 -mips32 -mhard-float"
+#PREFIX=../ffmpeg-build/mips
+#OUT_LIBRARY=$PREFIX/libffmpeg.so
+#ADDITIONAL_CONFIGURE_FLAG="--disable-mips32r2"
+#SONAME=libffmpeg.so
+#PREBUILT=$NDK/toolchains/mipsel-linux-android-4.4.3/prebuilt/$OS
+#PLATFORM_VERSION=android-8
+#build_amr
+#build_aac
+#build_fribidi
+#build_freetype2
+#build_ass
+#build_ffmpeg
+#build_one
 
 #arm v7vfpv3
 EABIARCH=arm-linux-androideabi
@@ -435,7 +435,7 @@ OUT_LIBRARY=../ffmpeg-build/armeabi-v7a/libffmpeg-neon.so
 ADDITIONAL_CONFIGURE_FLAG=--enable-neon
 SONAME=libffmpeg-neon.so
 PREBUILT=$NDK/toolchains/arm-linux-androideabi-4.4.3/prebuilt/$OS
-PLATFORM_VERSION=android-9
+PLATFORM_VERSION=android-8
 build_amr
 build_aac
 build_fribidi
